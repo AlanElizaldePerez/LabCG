@@ -1,0 +1,2 @@
+# LabCG
+ PracticasComputacionGrafica
