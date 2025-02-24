@@ -200,39 +200,41 @@ int main() {
 
 		glBindVertexArray(VAO);
 
+		//Torzo
 		model = glm::mat4(1.0f);
-		model = glm::scale(model, glm::vec3(3.0f, 0.1f, 2.0f)); //ancho, grosor, profundidad
-		model = glm::translate(model, glm::vec3(0.0f, 0.6f, 0.0f));
+		model = glm::scale(model, glm::vec3(1.0f, 1.3f, 1.0f)); //ancho, grosor, profundidad
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
+		//	Junta
 		model = glm::mat4(1.0f);
-		model = glm::scale(model, glm::vec3(0.1f, 0.6f, 0.1f)); // Tamaño de la pata
-		model = glm::translate(model, glm::vec3(2.9f, -0.6f, 1.9f));
+		model = glm::scale(model, glm::vec3(0.80f, 0.10f, 0.80f)); // Tamaño de la pata
+		model = glm::translate(model, glm::vec3(0.00f, 7.2f, 0.00f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 
-		// Pata 2
+		// Cabeza
 		model = glm::mat4(1.0f);
-		model = glm::scale(model, glm::vec3(0.1f, 0.6f, 0.1f));
-		model = glm::translate(model, glm::vec3(-2.9f, -0.6f, 1.9f));
+		model = glm::scale(model, glm::vec3(01.0f, 0.50f, 1.0f));
+		model = glm::translate(model, glm::vec3(0.0f, 2.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
-		// Pata 3
+		// Ojo izquierdo
 		model = glm::mat4(1.0f);
-		model = glm::scale(model, glm::vec3(0.1f, 0.6f, 0.1f));
-		model = glm::translate(model, glm::vec3(-2.9f, -0.6f, -1.9f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::translate(model, glm::vec3(-0.9f, 0.6f, 1.f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// Pata 4
-		model = glm::mat4(1.0f);
+		/*model = glm::mat4(1.0f);
 		model = glm::scale(model, glm::vec3(0.1f, 0.6f, 0.1f));
 		model = glm::translate(model, glm::vec3(2.9f, -0.6f, -1.9f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glDrawArrays(GL_TRIANGLES, 0, 36);
+		glDrawArrays(GL_TRIANGLES, 0, 36);*/
 
 		glBindVertexArray(0);
 
@@ -252,20 +254,21 @@ void Inputs(GLFWwindow* window) {
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)  //GLFW_RELEASE
 		glfwSetWindowShouldClose(window, true);
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-		movX += 0.02f;
+		movX += 0.01f;
 	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-		movX -= 0.02f;
+		movX -= 0.01f;
 	if (glfwGetKey(window, GLFW_KEY_PAGE_UP) == GLFW_PRESS)
-		movY += 0.02f;
+		movY += 0.01f;
 	if (glfwGetKey(window, GLFW_KEY_PAGE_DOWN) == GLFW_PRESS)
-		movY -= 0.02f;
+		movY -= 0.01f;
 	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-		movZ -= 0.02f;
+		movZ -= 0.01f;
 	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-		movZ += 0.02f;
+		movZ += 0.01f;
 	if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
 		rot += 0.1f;
 	if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
 		rot -= 0.1f;
 }
+
 
