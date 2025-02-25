@@ -200,7 +200,7 @@ int main() {
 
 		glBindVertexArray(VAO);
 
-		//Torzo
+		//Torso
 		model = glm::mat4(1.0f);
 		model = glm::scale(model, glm::vec3(1.0f, 1.3f, 1.0f)); //ancho, grosor, profundidad
 		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
@@ -222,19 +222,79 @@ int main() {
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
-		// Ojo izquierdo
+		// Ojo derecho
 		model = glm::mat4(1.0f);
-		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
-		model = glm::translate(model, glm::vec3(-0.9f, 0.6f, 1.f));
+		model = glm::scale(model, glm::vec3(0.15f, 0.15f, 0.06f));
+		model = glm::translate(model, glm::vec3(-1.7f, 7.30f, 8.60f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
-		// Pata 4
-		/*model = glm::mat4(1.0f);
-		model = glm::scale(model, glm::vec3(0.1f, 0.6f, 0.1f));
-		model = glm::translate(model, glm::vec3(2.9f, -0.6f, -1.9f));
+		// Ojo izquierdo
+		model = glm::mat4(1.0f);
+		model = glm::scale(model, glm::vec3(0.15f, 0.15f, 0.06f));
+		model = glm::translate(model, glm::vec3(1.7f, 7.30f, 8.60f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glDrawArrays(GL_TRIANGLES, 0, 36);*/
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+
+		// Antena derecha
+		model = glm::mat4(1.0f);
+		model = glm::scale(model, glm::vec3(0.15f, 0.15f, 0.15f));
+		model = glm::translate(model, glm::vec3(-1.7f, 8.75f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+
+		// Antena derecha superior
+		model = glm::mat4(1.0f);
+		model = glm::scale(model, glm::vec3(0.15f, 0.15f, 0.15f));
+		model = glm::translate(model, glm::vec3(-2.7f, 9.75f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+
+		// Antena izquierda
+		model = glm::mat4(1.0f);
+		model = glm::scale(model, glm::vec3(0.15f, 0.15f, 0.15f));
+		model = glm::translate(model, glm::vec3(1.7f, 8.75f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+
+		// Antena izquierda superior
+		model = glm::mat4(1.0f);
+		model = glm::scale(model, glm::vec3(0.15f, 0.15f, 0.15f));
+		model = glm::translate(model, glm::vec3(2.7f, 9.75f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+
+		//Brazo derecho
+		model = glm::mat4(1.0f);
+		model = glm::scale(model, glm::vec3(0.30f, 0.9f, 0.30f)); //ancho, grosor, profundidad
+		model = glm::translate(model, glm::vec3(-1.950f, 0.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+
+		//Brazo izquierdo
+		model = glm::mat4(1.0f);
+		model = glm::scale(model, glm::vec3(0.30f, 0.9f, 0.30f)); //ancho, grosor, profundidad
+		model = glm::translate(model, glm::vec3(1.950f, 0.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+
+		//Pierna derecha
+		model = glm::mat4(1.0f);
+		model = glm::scale(model, glm::vec3(0.250f, 0.3f, 0.250f)); //ancho, grosor, profundidad
+		model = glm::translate(model, glm::vec3(-0.80f, -2.65f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+
+		//Pierna izquierda
+		model = glm::mat4(1.0f);
+		model = glm::scale(model, glm::vec3(0.250f, 0.3f, 0.250f)); //ancho, grosor, profundidad
+		model = glm::translate(model, glm::vec3(0.80f, -2.65f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+
+
+
+
 
 		glBindVertexArray(0);
 
@@ -257,10 +317,10 @@ void Inputs(GLFWwindow* window) {
 		movX += 0.01f;
 	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
 		movX -= 0.01f;
-	if (glfwGetKey(window, GLFW_KEY_PAGE_UP) == GLFW_PRESS)
-		movY += 0.01f;
-	if (glfwGetKey(window, GLFW_KEY_PAGE_DOWN) == GLFW_PRESS)
-		movY -= 0.01f;
+	if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
+		movY += 0.005f;
+	if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
+		movY -= 0.005f;
 	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
 		movZ -= 0.01f;
 	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
