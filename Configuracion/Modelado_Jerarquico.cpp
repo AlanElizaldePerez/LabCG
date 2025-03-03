@@ -1,6 +1,7 @@
 //Práctica 5
 //Elizalde Pérez Alan
 //319278949
+//07/03/25
 #include<iostream>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -24,7 +25,8 @@ movZ = -5.0f,
 rot = 0.0f;
 
 //For model
-float	hombro = 0.0f, codo = 0.0f, muneca=0.0f,dedo1=0.0f,dedo2=0.0f;
+float	hombro = 0.0f, codo = 0.0f, muneca=0.0f,dedo1=0.0f,dedo2=0.0f,
+dedo3=0.0;
 
 
 int main() {
@@ -182,7 +184,7 @@ int main() {
 		glm::mat4 view=glm::mat4(1);
 		glm::mat4 modelTemp = glm::mat4(1.0f); //Temp
 		glm::mat4 modelTemp2 = glm::mat4(1.0f); //Temp
-
+		glm::mat4 modelTemp3 = glm::mat4(1.0f); //Temp
 
 
 		//View set up 
@@ -250,6 +252,19 @@ int main() {
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glDrawArrays(GL_TRIANGLES, 0, 36);//E
+
+		//Model Dedo1 C
+		model = glm::translate(modelTemp, glm::vec3(1.0f, 0.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(dedo3), glm::vec3(0.0f, 0.0, 1.0f));
+		modelTemp3 = modelTemp = model = glm::translate(model, glm::vec3(0.25f, 0.0f, 0.0f));
+		model = glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.50f, 0.3f, 0.25f));
+		color = glm::vec3(0.50f, 0.50f, 0.50f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);//E
+
+
 
 
 
