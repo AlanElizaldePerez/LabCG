@@ -42,7 +42,7 @@ int main() {
 
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Modelado jerarquico", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Práctica 5 Elizalde Perez Alan", nullptr, nullptr);
 
 	int screenWidth, screenHeight;
 
@@ -266,14 +266,14 @@ int main() {
 		glDrawArrays(GL_TRIANGLES, 0, 36); // E
 
 		// Model Dedo2 A
-		model = glm::translate(modelTemp2, glm::vec3(0.25f, 0.35f, 0.220f)); // Ajustar la posición
+		model = glm::translate(modelTemp2, glm::vec3(0.25f, 0.35f, 0.220f));
 		model = glm::rotate(model, glm::radians(dedo2A), glm::vec3(0.0f, 0.0, 1.0f));
 		modelTemp = model = glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(1.0f, 0.3f, 0.25f));
 		color = glm::vec3(0.0f, 1.0f, 1.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glDrawArrays(GL_TRIANGLES, 0, 36); // D
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// Model Dedo2 B
 		model = glm::translate(modelTemp, glm::vec3(0.50f, 0.0f, 0.0f));
@@ -283,7 +283,7 @@ int main() {
 		color = glm::vec3(1.0f, 0.0f, 1.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glDrawArrays(GL_TRIANGLES, 0, 36); // E
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// Model Dedo2 C
 		model = glm::translate(modelTemp, glm::vec3(0.50f, 0.0f, 0.0f));
@@ -293,17 +293,17 @@ int main() {
 		color = glm::vec3(0.50f, 0.50f, 0.50f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glDrawArrays(GL_TRIANGLES, 0, 36); // E
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// Model Dedo3 A
-		model = glm::translate(modelTemp2, glm::vec3(0.25f, 0.35f, -0.210f)); // Ajustar la posición
+		model = glm::translate(modelTemp2, glm::vec3(0.25f, 0.35f, -0.210f));
 		model = glm::rotate(model, glm::radians(dedo3A), glm::vec3(0.0f, 0.0, 1.0f));
 		modelTemp = model = glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(1.0f, 0.3f, 0.25f));
 		color = glm::vec3(0.0f, 1.0f, 1.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glDrawArrays(GL_TRIANGLES, 0, 36); // D
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// Model Dedo3 B
 		model = glm::translate(modelTemp, glm::vec3(0.50f, 0.0f, 0.0f));
@@ -313,7 +313,7 @@ int main() {
 		color = glm::vec3(1.0f, 0.0f, 1.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glDrawArrays(GL_TRIANGLES, 0, 36); // E
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// Model Dedo3 C
 		model = glm::translate(modelTemp, glm::vec3(0.50f, 0.0f, 0.0f));
@@ -323,17 +323,17 @@ int main() {
 		color = glm::vec3(0.50f, 0.50f, 0.50f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glDrawArrays(GL_TRIANGLES, 0, 36); // E
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// Model Dedo4 A
-		model = glm::translate(modelTemp2, glm::vec3(0.25f, 0.35f, -0.640f)); // Ajustar la posición
+		model = glm::translate(modelTemp2, glm::vec3(0.25f, 0.35f, -0.640f));
 		model = glm::rotate(model, glm::radians(dedo4A), glm::vec3(0.0f, 0.0, 1.0f));
 		modelTemp = model = glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(1.0f, 0.3f, 0.25f));
 		color = glm::vec3(0.0f, 1.0f, 1.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glDrawArrays(GL_TRIANGLES, 0, 36); // D
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// Model Dedo4 B
 		model = glm::translate(modelTemp, glm::vec3(0.50f, 0.0f, 0.0f));
@@ -343,7 +343,7 @@ int main() {
 		color = glm::vec3(1.0f, 0.0f, 1.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glDrawArrays(GL_TRIANGLES, 0, 36); // E
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// Model Dedo4 C
 		model = glm::translate(modelTemp, glm::vec3(0.50f, 0.0f, 0.0f));
@@ -353,17 +353,17 @@ int main() {
 		color = glm::vec3(0.50f, 0.50f, 0.50f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glDrawArrays(GL_TRIANGLES, 0, 36); // E
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// Model Dedo5 A
-		model = glm::translate(modelTemp2, glm::vec3(0.25f, -0.350f, 0.650f)); // Ajustar la posición
+		model = glm::translate(modelTemp2, glm::vec3(0.25f, -0.350f, 0.650f));
 		model = glm::rotate(model, glm::radians(dedo5A), glm::vec3(0.0f, 1.0, 0.0f));
 		modelTemp = model = glm::translate(model, glm::vec3(0.5f, 0.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(1.0f, 0.3f, 0.25f));
 		color = glm::vec3(0.0f, 1.0f, 1.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glDrawArrays(GL_TRIANGLES, 0, 36); // D
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// Model Dedo5 B
 		model = glm::translate(modelTemp, glm::vec3(0.50f, 0.0f, 0.0f));
@@ -373,7 +373,7 @@ int main() {
 		color = glm::vec3(1.0f, 0.0f, 1.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glDrawArrays(GL_TRIANGLES, 0, 36); // E
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		glBindVertexArray(0);
 
@@ -422,33 +422,33 @@ void Inputs(GLFWwindow* window) {
 		codo = glm::clamp(codo - angSpeed, -90.0f, 0.0f);
 
 	if (glfwGetKey(window, GLFW_KEY_H) == GLFW_PRESS)
-		muneca = glm::clamp(muneca + angSpeed, -45.0f, 45.0f);  // Flexión/extensión
+		muneca = glm::clamp(muneca + angSpeed, -45.0f, 45.0f);
 	if (glfwGetKey(window, GLFW_KEY_Y) == GLFW_PRESS)
 		muneca = glm::clamp(muneca - angSpeed, -45.0f, 45.0f);
 
-	// Dedo 1
+	// Dedo 1 (Dedo1 A)
 	if (glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS)
-		dedo1 = glm::clamp(dedo1 + angSpeed, -10.0f, 0.0f);
+		dedo1 = glm::clamp(dedo1 + angSpeed, -10.0f, 80.0f);
 	if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS)
-		dedo1 = glm::clamp(dedo1 - angSpeed, -10.0f, 0.0f);
+		dedo1 = glm::clamp(dedo1 - angSpeed, -10.0f, 80.0f);
 
-	// Dedo 2
+	// Dedo 2 (Dedo1 B)
 	if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS)
 		dedo2 = glm::clamp(dedo2 + angSpeed, -90.0f, 0.0f);
 	if (glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS)
 		dedo2 = glm::clamp(dedo2 - angSpeed, -90.0f, 0.0f);
 
-	// Dedo 3
+	// Dedo 3 (Dedo1 C)
 	if (glfwGetKey(window, GLFW_KEY_O) == GLFW_PRESS)
 		dedo3 = glm::clamp(dedo3 + angSpeed, -75.0f, 0.0f);
 	if (glfwGetKey(window, GLFW_KEY_L) == GLFW_PRESS)
 		dedo3 = glm::clamp(dedo3 - angSpeed, -75.0f, 0.0f);
 
-	// Dedo 2 (segmentos)
+	// Dedo 2
 	if (glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS)
-		dedo2A = glm::clamp(dedo2A + angSpeed, -10.0f, 0.0f);
+		dedo2A = glm::clamp(dedo2A + angSpeed, -10.0f, 80.0f);
 	if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS)
-		dedo2A = glm::clamp(dedo2A - angSpeed, -10.0f, 0.0f);
+		dedo2A = glm::clamp(dedo2A - angSpeed, -10.0f, 80.0f);
 	if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS)
 		dedo2B = glm::clamp(dedo2B + angSpeed, -90.0f, 0.0f);
 	if (glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS)
@@ -458,11 +458,11 @@ void Inputs(GLFWwindow* window) {
 	if (glfwGetKey(window, GLFW_KEY_L) == GLFW_PRESS)
 		dedo2C = glm::clamp(dedo2C - angSpeed, -75.0f, 0.0f);
 
-	// Dedo 3 (segmentos)
+	// Dedo 3
 	if (glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS)
-		dedo3A = glm::clamp(dedo3A + angSpeed, -10.0f, 0.0f);
+		dedo3A = glm::clamp(dedo3A + angSpeed, -10.0f, 80.0f);
 	if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS)
-		dedo3A = glm::clamp(dedo3A - angSpeed, -10.0f, 0.0f);
+		dedo3A = glm::clamp(dedo3A - angSpeed, -10.0f, 80.0f);
 	if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS)
 		dedo3B = glm::clamp(dedo3B + angSpeed, -90.0f, 0.0f);
 	if (glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS)
@@ -474,9 +474,9 @@ void Inputs(GLFWwindow* window) {
 
 	// Dedo 4
 	if (glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS)
-		dedo4A = glm::clamp(dedo4A + angSpeed, -10.0f, 0.0f);
+		dedo4A = glm::clamp(dedo4A + angSpeed, -10.0f, 80.0f);
 	if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS)
-		dedo4A = glm::clamp(dedo4A - angSpeed, -10.0f, 0.0f);
+		dedo4A = glm::clamp(dedo4A - angSpeed, -10.0f, 80.0f);
 	if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS)
 		dedo4B = glm::clamp(dedo4B + angSpeed, -90.0f, 0.0f);
 	if (glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS)
