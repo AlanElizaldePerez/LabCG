@@ -22,7 +22,6 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
 
-
   </ItemGroup>
   <ItemGroup>
     <None Include="Shader\modelLoading.frag">
@@ -48,6 +47,7 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
+
 
 
 </Project>
