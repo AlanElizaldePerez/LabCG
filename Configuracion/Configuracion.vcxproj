@@ -23,18 +23,24 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <None Include="Shader\modelLoading.frag" />
     <None Include="Shader\modelLoading.vs" />
 =======
+=======
+>>>>>>> parent of ae7f982 (Previo 6: Carga de modelos)
     <None Include="Shader\core.frag" />
     <None Include="Shader\core.vs" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Modelado_Jerarquico.cpp" />
+<<<<<<< HEAD
 >>>>>>> parent of ae7f982 (Previo 6: Carga de modelos)
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Carga de Modelos.cpp" />
+=======
+>>>>>>> parent of ae7f982 (Previo 6: Carga de modelos)
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
