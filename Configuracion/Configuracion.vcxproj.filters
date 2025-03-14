@@ -22,6 +22,7 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
 <<<<<<< HEAD
+<<<<<<< HEAD
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
@@ -47,6 +48,22 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
+=======
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shader\core.frag">
+      <Filter>Archivos de origen\Shader</Filter>
+    </None>
+    <None Include="Shader\core.vs">
+      <Filter>Archivos de origen\Shader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Modelado_Jerarquico.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+  </ItemGroup>
+>>>>>>> parent of ae7f982 (Previo 6: Carga de modelos)
 =======
   </ItemGroup>
   <ItemGroup>
